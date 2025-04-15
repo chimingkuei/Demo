@@ -17,25 +17,21 @@ public class LineScan extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_line_scan);
 
-        Button calculateButton = findViewById(R.id.calculateButton);
-
-        calculateButton.setOnClickListener(v -> {
+        Button calculateTriggerTimes = findViewById(R.id.Calculate_Trigger_Times);
+        calculateTriggerTimes.setOnClickListener(v -> {
             EditText sampleLength = findViewById(R.id.Sample_Length);
             EditText opticalResolution = findViewById(R.id.Optical_Resolution);
             EditText captureCardHeight = findViewById(R.id.Capture_Card_Height);
-            TextView triggerTimes = findViewById(R.id.Trigger_times);
-
+            TextView triggerTimes = findViewById(R.id.Trigger_Times);
             try {
                 double b11 = Double.parseDouble(sampleLength.getText().toString());
                 double b12 = Double.parseDouble(opticalResolution.getText().toString());
                 double b13 = Double.parseDouble(captureCardHeight.getText().toString());
-
                 if (b12 != 0 && b13 != 0) {
                     double intermediate = (b11 + 100) * 1000 / b12 / b13;
                     double ceilingValue = Math.ceil(intermediate);
                     double result = ceilingValue * b13;
-
-                    String resultText = "觸發次數: " + (int)result;
+                    String resultText = (int)result + "次";
                     triggerTimes.setText(resultText);
 
                     Log.d("CALC_RESULT", "Result: " + result);
@@ -49,5 +45,30 @@ public class LineScan extends AppCompatActivity {
             }
         });
 
+        Button calculateMoveLastPosition = findViewById(R.id.Calculate_Move_Last_Position);
+        calculateMoveLastPosition.setOnClickListener(v -> {
+            EditText opticalResolution = findViewById(R.id.Optical_Resolution);
+            TextView triggerTimes = findViewById(R.id.Trigger_Times);
+            EditText mobileResolution = findViewById(R.id.Mobile_Resolution);
+            EditText triggerStartPosition = findViewById(R.id.Trigger_Start_Position);
+            TextView resultText = findViewById(R.id.Move_Last_Position);
+            try {
+                double b12 = Double.parseDouble(opticalResolution.getText().toString());
+                double b14 = Double.parseDouble(triggerTimes.getText().toString().replace("次", "").trim());
+                double b15 = Double.parseDouble(mobileResolution.getText().toString());
+                double b16 = Double.parseDouble(triggerStartPosition.getText().toString());
+                if (b15 != 0) {
+                    double result = b16 + b14 * b12 / b15;
+                    resultText.setText((int)result + "pluse");
+                    Log.d("FORMULA_RESULT", "Result: " + result);
+                } else {
+                    resultText.setText("錯誤：B15 不能為 0");
+                    Log.e("FORMULA_ERROR", "除以 0 發生錯誤");
+                }
+            } catch (NumberFormatException e) {
+                resultText.setText("錯誤：請輸入有效數字");
+                Log.e("FORMULA_ERROR", "輸入格式錯誤", e);
+            }
+        });
     }
 }

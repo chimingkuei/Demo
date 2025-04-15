@@ -7,32 +7,46 @@
     android:layout_height="match_parent"
     tools:context=".LineScan">
 
-    <!-- ========== Sample Length ========== -->
+    <!-- Sample Length -->
     <TextView
         android:id="@+id/Sample_Length_Label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="樣品長度:"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintHorizontal_bias="0.153"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.261" />
+        app:layout_constraintVertical_bias="0.067" />
+    <TextView
+        android:id="@+id/Sample_Length_Unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="mm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.067" />
     <EditText
         android:id="@+id/Sample_Length"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="176dp"
+        android:layout_marginTop="50dp"
+        android:textAlignment="center"
         android:hint="請輸入數字"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.785"
+        app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="0.5" />
-    <!-- ========== Sample Length ========== -->
-    <!-- ========== Optical Resolution ========== -->
+    <!-- Sample Length -->
+    <!-- Optical Resolution -->
     <TextView
         android:id="@+id/Optical_Resolution_Label"
         android:layout_width="wrap_content"
@@ -40,79 +54,230 @@
         android:text="光學解析度:"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.234"
+        app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.356" />
+        app:layout_constraintVertical_bias="0.134" />
+    <TextView
+        android:id="@+id/Optical_Resolution_Unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="um/px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.134" />
     <EditText
         android:id="@+id/Optical_Resolution"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="100dp"
+        android:textAlignment="center"
         android:hint="請輸入數字"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.79"
+        app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="0.5" />
-    <!-- ========== Optical Resolution ========== -->
-    <!-- ========== Capture Card Height ========== -->
+    <!-- Optical Resolution -->
+    <!-- Capture Card Height -->
     <TextView
         android:id="@+id/Capture_Card_Height_Label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="光學解析度:"
+        android:layout_marginTop="-10dp"
+        android:text="擷取卡Height:"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.234"
+        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.433" />
+        app:layout_constraintVertical_bias="0.201" />
+    <TextView
+        android:id="@+id/Capture_Card_Height_Unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:text="px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.201" />
     <EditText
         android:id="@+id/Capture_Card_Height"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="150dp"
+        android:textAlignment="center"
         android:hint="請輸入數字"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.79"
+        app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="0.5" />
-    <!-- ========== Capture Card Height ========== -->
-    <!-- ========== Trigger times ========== -->
+    <!-- Capture Card Height -->
+    <!-- Trigger Times -->
     <TextView
-        android:id="@+id/Trigger_times_Label"
+        android:id="@+id/Trigger_Times_Label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="-20dp"
         android:text="觸發次數:"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.264"
+        app:layout_constraintHorizontal_bias="0.153"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.553" />
+        app:layout_constraintVertical_bias="0.268" />
     <TextView
-        android:id="@+id/Trigger_times"
-        android:layout_width="wrap_content"
+        android:id="@+id/Trigger_Times"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="-20dp"
+        android:textAlignment="center"
+        android:textSize="15sp"
         android:text="顯示觸發次數"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.711"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.542" />
-    <!-- ========== Trigger times ========== -->
+        app:layout_constraintVertical_bias="0.268" />
+    <!-- Trigger Times -->
+    <!-- Calculate Trigger Times -->
     <Button
-        android:id="@+id/calculateButton"
+        android:id="@+id/Calculate_Trigger_Times"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="30dp"
         android:text="計算觸發次數"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Capture_Card_Height" />
+        app:layout_constraintTop_toBottomOf="@+id/Trigger_Times" />
+    <!-- Calculate Trigger Times -->
+    <!-- Mobile Resolution -->
+    <TextView
+        android:id="@+id/Mobile_Resolution_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:text="移動解析度:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
+    <TextView
+        android:id="@+id/Mobile_Resolution_Unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:text="px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
+    <EditText
+        android:id="@+id/Mobile_Resolution"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="325dp"
+        android:textAlignment="center"
+        android:hint="請輸入數字"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5" />
+    <!-- Mobile Resolution -->
+    <!-- Trigger Start Position -->
+    <TextView
+        android:id="@+id/Trigger_Start_Position_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:text="觸發起始位置:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.467" />
+    <TextView
+        android:id="@+id/Trigger_Start_Position_Unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="pulse"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.395" />
+    <EditText
+        android:id="@+id/Trigger_Start_Position"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="385dp"
+        android:textAlignment="center"
+        android:hint="請輸入數字"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5" />
+    <!-- Trigger Start Position -->
+    <!-- Move Last Position -->
+    <TextView
+        android:id="@+id/Move_Last_Position_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:text="移動最後位置≧:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.534" />
+    <TextView
+        android:id="@+id/Move_Last_Position"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="310dp"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:text="顯示移動最後位置"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.268" />
+    <!-- Move Last Position -->
+    <!-- Calculate Move Last Position -->
+    <Button
+        android:id="@+id/Calculate_Move_Last_Position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:text="計算最後移動位置"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Trigger_Times" />
+    <!-- Calculate Move Last Position -->
 </androidx.constraintlayout.widget.ConstraintLayout>
