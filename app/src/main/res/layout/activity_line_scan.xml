@@ -273,12 +273,12 @@
         android:id="@+id/Calculate_Move_Last_Position"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="10dp"
         android:text="計算最後移動位置"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Trigger_Times" />
+        app:layout_constraintTop_toBottomOf="@+id/Move_Last_Position" />
     <!-- Calculate Move Last Position -->
     <!-- Capture Card Period -->
     <TextView
@@ -375,4 +375,28 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.268" />
     <!-- Movement Speed -->
+    <!-- Calculate Line Rate -->
+    <Button
+        android:id="@+id/Calculate_Line_Rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="計算Line Rate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Movement_Speed" />
+    <!-- Calculate Line Rate -->
+    <!-- Calculate Movement Speed -->
+    <Button
+        android:id="@+id/Calculate_Movement_Speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="計算移動速度"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Calculate_Line_Rate" />
+    <!-- Calculate Line Rate -->
 </androidx.constraintlayout.widget.ConstraintLayout>
