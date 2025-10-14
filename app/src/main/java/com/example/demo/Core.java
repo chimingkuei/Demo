@@ -11,7 +11,7 @@ public class Core {
             double b12 = Double.parseDouble(opticalResolution.getText().toString());
             double b13 = Double.parseDouble(captureCardHeight.getText().toString());
             if (b12 != 0 && b13 != 0) {
-                double intermediate = (b11 + 100) * 1000 / b12 / b13;
+                double intermediate = (b11 + 503) * 1000 / b12 / b13;
                 double ceilingValue = Math.ceil(intermediate);
                 double result = ceilingValue * b13;
                 String resultText = (int) result + "次";
