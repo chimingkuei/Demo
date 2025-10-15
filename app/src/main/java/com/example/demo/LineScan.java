@@ -27,7 +27,6 @@ public class LineScan extends AppCompatActivity {
         // 如果 trigger 有值（大於 0），就填入 EditText
         int trigger = config.getTriggerStartPosition();
         EditText triggerStartPosition = findViewById(R.id.Trigger_Start_Position);
-
         if (trigger > 0) {
             triggerStartPosition.setText(String.valueOf(trigger));
         }
@@ -65,6 +64,28 @@ public class LineScan extends AppCompatActivity {
             TextView lineRate = findViewById(R.id.Line_Rate);
             TextView resultText = findViewById(R.id.Movement_Speed);
             Core.calculateMovementSpeed(opticalResolution, lineRate, resultText);
+        });
+        //儲存參數
+        Button saveConfig = findViewById(R.id.Save_Config);
+        saveConfig.setOnClickListener(v -> {
+            try {
+                // 取得 EditText 的數值
+                int newRes = Integer.parseInt(mobileResolution.getText().toString());
+                int newTrigger = Integer.parseInt(triggerStartPosition.getText().toString());
+
+                // 更新 ConfigManager
+                config.setMobileResolution(newRes);
+                config.setTriggerStartPosition(newTrigger);
+
+                // 儲存到內部檔案
+                config.save(getApplicationContext());
+
+                // 使用 Log.d 顯示成功訊息
+                Log.d("ConfigManager", "參數已儲存: MobileResolution=" + newRes + ", TriggerStartPosition=" + newTrigger);
+            } catch (NumberFormatException e) {
+                // 使用 Log.d 顯示錯誤訊息
+                Log.d("ConfigManager", "輸入錯誤，請輸入正確的數字");
+            }
         });
 
     }

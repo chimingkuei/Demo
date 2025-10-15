@@ -399,4 +399,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Calculate_Line_Rate" />
     <!-- Calculate Movement Speed -->
+    <!-- Calculate Movement Speed -->
+    <Button
+        android:id="@+id/Save_Config"
+        android:layout_width="82dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="28dp"
+        android:text="儲存參數"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Movement_Speed" />
+    <!-- Calculate Movement Speed -->
 </androidx.constraintlayout.widget.ConstraintLayout>
