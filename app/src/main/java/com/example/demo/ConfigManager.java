@@ -16,9 +16,13 @@ public class ConfigManager {
     private static final String CONFIG_FILE_NAME = "config.json";
     private static ConfigManager instance;
 
-    // === 你要的兩個參數 ===
-    private int MobileResolution;
-    private int TriggerStartPosition;
+    // === 參數 ===
+    private int sampleLength;
+    private int opticalResolution;
+    private int captureCardHeight;
+    private int mobileResolution;
+    private int triggerStartPosition;
+    private int captureCardPeriod;
 
     private ConfigManager() {}
 
@@ -52,11 +56,12 @@ public class ConfigManager {
 
             // 解析 JSON
             JSONObject json = new JSONObject(jsonText);
-            MobileResolution = json.optInt("MobileResolution", 0);
-            TriggerStartPosition = json.optInt("TriggerStartPosition", 0);
-
-            Log.d(TAG, "Config loaded: MobileResolution=" + MobileResolution +
-                    ", TriggerStartPosition=" + TriggerStartPosition);
+            sampleLength = json.optInt("sampleLength", 0);
+            opticalResolution = json.optInt("opticalResolution", 0);
+            captureCardHeight = json.optInt("captureCardHeight", 0);
+            mobileResolution = json.optInt("mobileResolution", 0);
+            triggerStartPosition = json.optInt("triggerStartPosition", 0);
+            captureCardPeriod = json.optInt("captureCardPeriod", 0);
         } catch (Exception e) {
             Log.e(TAG, "Error loading config", e);
         }
@@ -66,8 +71,12 @@ public class ConfigManager {
     public void save(Context context) {
         try {
             JSONObject json = new JSONObject();
-            json.put("MobileResolution", MobileResolution);
-            json.put("TriggerStartPosition", TriggerStartPosition);
+            json.put("sampleLength", sampleLength);
+            json.put("opticalResolution", opticalResolution);
+            json.put("captureCardHeight", captureCardHeight);
+            json.put("mobileResolution", mobileResolution);
+            json.put("triggerStartPosition", triggerStartPosition);
+            json.put("captureCardPeriod", captureCardPeriod);
 
             saveToFile(context, json.toString());
             Log.d(TAG, "Config saved to internal storage.");
@@ -92,9 +101,17 @@ public class ConfigManager {
     }
 
     // === Getter / Setter ===
-    public int getMobileResolution() { return MobileResolution; }
-    public int getTriggerStartPosition() { return TriggerStartPosition; }
+    public int getsampleLength(){ return sampleLength; }
+    public int getopticalResolution(){ return opticalResolution; }
+    public int getcaptureCardHeight(){ return captureCardHeight; }
+    public int getmobileResolution() { return mobileResolution; }
+    public int gettriggerStartPosition() { return triggerStartPosition; }
+    public int getcaptureCardPeriod() { return captureCardPeriod; }
 
-    public void setMobileResolution(int value) { this.MobileResolution = value; }
-    public void setTriggerStartPosition(int value) { this.TriggerStartPosition = value; }
+    public void setsampleLength(int value){ this.sampleLength = value;}
+    public void setopticalResolution(int value){ this.opticalResolution = value; }
+    public void setcaptureCardHeight(int value){ this.captureCardHeight = value; }
+    public void setmobileResolution(int value) { this.mobileResolution = value; }
+    public void settriggerStartPosition(int value) { this.triggerStartPosition = value; }
+    public void setcaptureCardPeriod(int value) { this.captureCardPeriod = value; }
 }
