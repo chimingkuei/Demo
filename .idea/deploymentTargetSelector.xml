@@ -4,10 +4,10 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2025-10-15T04:11:23.514180600Z">
+        <DropdownSelection timestamp="2025-10-16T00:30:53.503680Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\chimi\.android\avd\ForTest_API_30.avd" />
+              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\chimi\.android\avd\OPPO_A55.avd" />
             </handle>
           </Target>
         </DropdownSelection>
