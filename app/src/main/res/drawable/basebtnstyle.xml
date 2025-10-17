@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 按下時 -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <gradient android:startColor="#005BEA" android:endColor="#00C6FB" android:angle="45"/>
+            <corners android:radius="30dp"/>
+            <padding android:left="20dp" android:right="20dp" android:top="10dp" android:bottom="10dp"/>
+        </shape>
+    </item>
+
+    <!-- 預設 -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:startColor="#00C6FB" android:endColor="#005BEA" android:angle="45"/>
+            <corners android:radius="30dp"/>
+            <padding android:left="20dp" android:right="20dp" android:top="10dp" android:bottom="10dp"/>
+        </shape>
+    </item>
+
+</selector>
